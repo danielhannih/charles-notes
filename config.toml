@@ -1,0 +1,12 @@
+baseURL = "https://danielhannih.github.io/charles-notes/"
+enableRobotsTXT = true
+disableHugoGeneratorInject = true
+uglyURLs = false
+disableKinds = ["taxonomy", "taxonomyTerm"]
+publishDir = "docs"
+
+[params]
+dev_environment = false
+
+[markup.goldmark.renderer]
+unsafe= true

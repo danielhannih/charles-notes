@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  <style>
+    :root{--text:#29282e;--body:#edeef4;--paper:#fff}@media(prefers-color-scheme:dark){:root{--text:#62626b;--body:#000;--paper:#131219}}body,textarea{font-family:BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-weight:400;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;line-height:1.4;color:var(--text)}body{display:flex;justify-content:center;align-items:center;margin:0;position:relative;height:100vh;background:var(--body)}textarea{width:720px;height:calc(100vh - 24px * 8);font-size:17px;padding:48px;border:none;border-radius:12px;-webkit-appearance:none;-moz-appearance:none;appearance:none;resize:none;background:var(--paper)}textarea:after,textarea:focus{border:none;outline:none}
+  </style>
+
+  <link rel="canonical" href="https://danielhannih.github.io/charles-notes/">
+  <title>Charles Notes</title>
+  <meta name="description" content="Simple note web app.">
+
+</head>
+<body>
+
+  <textarea id="textarea"></textarea>
+
+  
+  <script>
+    (()=>{const e="charles-notes";textarea.oninput=()=>window.localStorage.setItem(e,JSON.stringify(textarea.value)),window.onload=()=>textarea.value=JSON.parse(window.localStorage.getItem(e))})()
+  </script>
+
+</body>
+</html>
